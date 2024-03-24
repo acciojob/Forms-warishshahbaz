@@ -1,7 +1,6 @@
 // Form.js
 import React from "react";
 import Card from "./card";
-import "./app.css";
 
 function Form() {
   return (
