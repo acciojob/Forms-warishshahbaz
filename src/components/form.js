@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Form = () => {
   return (
     <>
-      <nav>
+      {/* <nav>
         <ul>
           <li>
             <Link to="/form" id="form-link">
@@ -23,7 +23,7 @@ const Form = () => {
             </Link>
           </li>
         </ul>
-      </nav>
+      </nav> */}
       <Card>
         <form id="info-form">
           <label htmlFor="full_name">Full Name:</label>
