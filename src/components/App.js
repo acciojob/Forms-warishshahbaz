@@ -7,7 +7,7 @@ function Form() {
   console.log("test");
   return (
     <Card title="Form Layout">
-      <form id="info-form">
+      <form id="form-link">
         <div>
           <label htmlFor="full_name">Full Name:</label>
           <input type="text" id="full_name" name="full_name" />
