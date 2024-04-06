@@ -4,6 +4,7 @@ import Card from "./card";
 import "./app.css";
 
 function Form() {
+  console.log("test");
   return (
     <Card title="Form Layout">
       <form id="info-form">
