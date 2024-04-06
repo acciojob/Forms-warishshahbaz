@@ -18,7 +18,6 @@ const FormRef = () => {
     const confirmPassword = confirmPasswordRef.current.value;
 
     // Handle form submission logic here
-    console.log("Submitted:", { fullName, email, password, confirmPassword });
   };
 
   return (
