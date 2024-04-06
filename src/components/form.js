@@ -5,25 +5,6 @@ import { Link } from "react-router-dom";
 const Form = () => {
   return (
     <>
-      {/* <nav>
-        <ul>
-          <li>
-            <Link to="/form" id="form-link">
-              Form
-            </Link>
-          </li>
-          <li>
-            <Link to="/form-ref" id="form-ref-link">
-              Form with useRef
-            </Link>
-          </li>
-          <li>
-            <Link to="/form-state" id="form-state-link">
-              Form with useState
-            </Link>
-          </li>
-        </ul>
-      </nav> */}
       <Card>
         <form id="info-form">
           <label htmlFor="full_name">Full Name:</label>
