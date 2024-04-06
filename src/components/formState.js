@@ -1,18 +1,18 @@
+// FormState.js
 import React, { useState } from "react";
 import Card from "./Card";
 
 const FormState = () => {
-  // State variables for form inputs
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
 
-  // Function to handle form submission
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
-    // Add your logic here to process the form data, e.g., send it to a server
-    console.log("Form submitted!");
+    e.preventDefault();
+
+    // Add form submission logic here
+    console.log("Submitted using useState:");
     console.log("Full Name:", fullName);
     console.log("Email:", email);
     console.log("Password:", password);

@@ -1,23 +1,26 @@
+// FormRef.js
 import React, { useRef } from "react";
 import Card from "./Card";
 
 const FormRef = () => {
-  // Create refs for each input field
   const fullNameRef = useRef(null);
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
-  const confirmPasswordRef = useRef(null);
+  const passwordConfirmationRef = useRef(null);
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Access input values using refs
     const fullName = fullNameRef.current.value;
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    const confirmPassword = confirmPasswordRef.current.value;
+    const passwordConfirmation = passwordConfirmationRef.current.value;
 
-    // Handle form submission logic here
+    // Add form submission logic here
+    console.log("Submitted using useRef:");
+    console.log("Full Name:", fullName);
+    console.log("Email:", email);
+    console.log("Password:", password);
+    console.log("Confirm Password:", passwordConfirmation);
   };
 
   return (
@@ -36,7 +39,7 @@ const FormRef = () => {
         <input
           type="password"
           id="password_confirmation"
-          ref={confirmPasswordRef}
+          ref={passwordConfirmationRef}
         />
 
         <button type="submit">Submit</button>
