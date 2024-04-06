@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Card from "./Card";
 
-const Form = () => {
+const FormRef = () => {
   // Create refs for each input field
   const fullNameRef = useRef(null);
   const emailRef = useRef(null);
@@ -46,4 +46,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default FormRef;

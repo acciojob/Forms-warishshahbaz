@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "./Card";
 
-const Form = () => {
+const FormState = () => {
   // State variables for form inputs
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -60,4 +60,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default FormState;
