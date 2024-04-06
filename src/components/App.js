@@ -1,37 +1,39 @@
-// Form.js
 import React from "react";
-import Card from "./card";
-import "./app.css";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Form from "./form";
+import FormRef from "./formRef";
+import FormState from "./formState";
 
-function Form() {
-  console.log("test");
+const App = () => {
   return (
-    <Card title="Form Layout">
-      <form id="form-link">
-        <div>
-          <label htmlFor="full_name">Full Name:</label>
-          <input type="text" id="full_name" name="full_name" />
-        </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" />
-        </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input type="password" id="password" name="password" />
-        </div>
-        <div>
-          <label htmlFor="password_confirmation">Password Confirmation:</label>
-          <input
-            type="password"
-            id="password_confirmation"
-            name="password_confirmation"
-          />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </Card>
-  );
-}
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/form" id="form-link">
+                Form
+              </Link>
+            </li>
+            <li>
+              <Link to="/form-ref" id="form-ref-link">
+                Form with useRef
+              </Link>
+            </li>
+            <li>
+              <Link to="/form-state" id="form-state-link">
+                Form with useState
+              </Link>
+            </li>
+          </ul>
+        </nav>
 
-export default Form;
+        <Route path="/form" component={Form} />
+        <Route path="/form-ref" component={FormRef} />
+        <Route path="/form-state" component={FormState} />
+      </div>
+    </Router>
+  );
+};
+
+export default App;
