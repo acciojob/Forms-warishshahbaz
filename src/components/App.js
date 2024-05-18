@@ -1,11 +1,10 @@
-// App.js
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Form from "./form";
-import FormRef from "./formRef";
-import FormState from "./formState";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Section1 from "./Section1";
+import Section2 from "./Section2";
+import Section3 from "./Section3";
 
-const App = () => {
+function App() {
   return (
     <Router>
       <div>
@@ -13,28 +12,30 @@ const App = () => {
           <ul>
             <li>
               <Link to="/form" id="form-link">
-                Form
+                Section 1
               </Link>
             </li>
             <li>
               <Link to="/form-ref" id="form-ref-link">
-                FormRef
+                Section 2
               </Link>
             </li>
             <li>
               <Link to="/form-state" id="form-state-link">
-                FormState
+                Section 3
               </Link>
             </li>
           </ul>
         </nav>
 
-        <Route path="/form" component={Form} />
-        <Route path="/form-ref" component={FormRef} />
-        <Route path="/form-state" component={FormState} />
+        <Routes>
+          <Route path="/form" element={<Section1 />} />
+          <Route path="/form-ref" element={<Section2 />} />
+          <Route path="/form-state" element={<Section3 />} />
+        </Routes>
       </div>
     </Router>
   );
-};
+}
 
 export default App;
